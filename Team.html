@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Fonts from fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="Team.css">
+  <title>Team - Hot Beans</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+  <canvas id="particle-canvas"
+    style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+  <!-- Navigation Bar     -->
+  <div class="navigation-Bar">
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo.png" alt="hot beans logo"></a>
+      <a href="index.html">
+        <h1>Hot Beans</h1>
+      </a>
+
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Jobs.html">Jobs</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+    </ul>
+
+    <button class="apply-btn"><a href="Apply.html">Apply</a></button>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger-btn');
+    const nav = document.getElementById('nav-links');
+
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+  <!-- Navigation Bar     -->
+
+
+
+  <div class="title">
+    <h1>Our Team</h1>
+  </div>
+
+  <div class="info">
+    <p>We aren't just recruiters. We are technical conduits bridging the gap between bleeding-edge startups and the
+      engineers capable of building the future.</p>
+  </div>
+
+
+  <div class="team-members-title">
+    <h1>Leadership Team</h1>
+    <div class="team-member">
+
+      <!-- James Carter -->
+      <div class="leader-card">
+
+        <img src="Team-images/JamesCarter.png" alt="leader image">
+        <h2>James Carter</h2>
+        <p>Chief Technology Officer (CTO)</p>
+        <div class="tags">
+          <span class="tag">Leadership</span>
+          <span class="tag">Architecture</span>
+          <span class="tag">Strategy</span>
+        </div>
+      </div>
+
+      <!-- Aisha Rahman -->
+      <div class="leader-card">
+        <img src="Team-images/AishaRahman.png" alt="leader image">
+        <h2>Aisha Rahman</h2>
+        <p>Lead Developer</p>
+        <div class="tags">
+          <span class="tag">Full Stack</span>
+          <span class="tag">Mentorship</span>
+          <span class="tag">Code Review</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="team-members-title">
+      <h1>Backend Team</h1>
+      <div class="team-member">
+
+        <!-- Daniel Kim -->
+        <div class="leader-card">
+          <img src="Team-images/DanielKim.png" alt="leader image">
+          <h2>Daniel Kim</h2>
+          <p>Senior Backend Developer</p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- Priya Patel -->
+        <div class="leader-card">
+          <img src="Team-images/PriyaPatel.png" alt="leader image">
+          <h2>Priya Patel</h2>
+          <p>Backend Developer</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+
+        <!-- Luca Rossi -->
+        <div class="leader-card">
+          <img src="Team-images/LucaRossi.png" alt="leader image">
+          <h2>Luca Rossi</h2>
+          <p>API Engineer</p>
+          <div class="tags">
+            <span class="tag">REST</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="team-members-title">
+        <h1>Frontend Team</h1>
+        <div class="team-member">
+
+          <!-- Emily Johnson -->
+          <div class="leader-card">
+            <img src="Team-images/EmilyJohnson.png" alt="leader image">
+            <h2>Emily Johnson</h2>
+            <p>Senior Frontend Developer</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+
+          <!-- Noah Smith -->
+          <div class="leader-card">
+            <img src="Team-images/NoahSmith.png" alt="leader image">
+            <h2>Noah Smith</h2>
+            <p>Frontend Developer</p>
+            <div class="tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Accessibility</span>
+            </div>
+          </div>
+
+          <!-- Sofia Garcia -->
+          <div class="leader-card">
+            <img src="Team-images/SofiaGarcia.png" alt="leader image">
+            <h2>Sofia Garcia</h2>
+            <p>UI Developer</p>
+            <div class="tags">
+              <span class="tag">UI Design</span>
+              <span class="tag">Animations</span>
+              <span class="tag">Tailwind</span>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="team-members-title">
+          <h1>Full Stack Team</h1>
+          <div class="team-member">
+
+            <!-- Ethan Brown -->
+            <div class="leader-card">
+              <img src="Team-images/EthanBrown.png" alt="leader image">
+              <h2>Ethan Brown</h2>
+              <p>Senior Full Stack Developer</p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+              </div>
+            </div>
+
+            <!-- Mia Dubois -->
+            <div class="leader-card">
+              <img src="Team-images/MiaDubois.png" alt="leader image">
+              <h2>Mia Dubois</h2>
+              <p>Full Stack Developer</p>
+              <div class="tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">SQL</span>
+                <span class="tag">DevOps</span>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="team-members-title">
+            <h1> Apprentice Team </h1>
+            <div class="team-member">
+
+              <!-- Jake Thompson -->
+              <div class="leader-card">
+                <img src="Team-images/JakeThompson.png" alt="leader image">
+                <h2>Jake Thompson</h2>
+                <p>Apprentice Developer</p>
+                <div class="tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+
+              <!-- Amelia Clarke -->
+              <div class="leader-card">
+                <img src="Team-images/AmeliaClarke.png" alt="leader image">
+                <h2>Amelia Clarke</h2>
+                <p>Web Development Apprentice</p>
+                <div class="tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">React</span>
+                  <span class="tag">UX Basics</span>
+                </div>
+              </div>
+
+              <!-- Liam Wilson -->
+              <div class="leader-card">
+                <img src="Team-images/LiamWilson.png" alt="leader image">
+                <h2>Liam Wilson</h2>
+                <p>Software Development Apprentice</p>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Git</span>
+                  <span class="tag">Agile</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="empty-space"> </div>
+
+
+            <footer>
+              <p>© 2026 Hot Beans Web</p>
+            </footer>
+
+
+
+
+            <script>
+              const canvas = document.getElementById('particle-canvas');
+              const ctx = canvas.getContext('2d');
+
+              let W, H;
+              let particles;
+
+              const COUNT = 80;
+              const MAX_DIST = 130;
+
+              const mouse = { x: -9999, y: -9999 };
+
+              function resize() {
+                W = canvas.width = window.innerWidth;
+                H = canvas.height = window.innerHeight;
+              }
+
+              function rand(a, b) {
+                return Math.random() * (b - a) + a;
+              }
+
+              function createParticles() {
+                particles = Array.from({ length: COUNT }, () => ({
+                  x: rand(0, W),
+                  y: rand(0, H),
+                  vx: rand(-0.25, 0.25),
+                  vy: rand(-0.25, 0.25),
+                  r: rand(1.5, 3),
+                  opacity: rand(0.4, 0.9)
+                }));
+              }
+
+              function draw() {
+                ctx.clearRect(0, 0, W, H);
+
+                for (let i = 0; i < COUNT; i++) {
+                  const p = particles[i];
+
+                  p.x += p.vx;
+                  p.y += p.vy;
+
+                  if (p.x < 0 || p.x > W) p.vx *= -1;
+                  if (p.y < 0 || p.y > H) p.vy *= -1;
+
+                  const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+
+                  if (dm < 150) {
+                    const f = (1 - dm / 150) * 0.6;
+                    p.x += (p.x - mouse.x) * f * 0.02;
+                    p.y += (p.y - mouse.y) * f * 0.02;
+                  }
+
+                  ctx.beginPath();
+                  ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                  ctx.fillStyle = `rgba(139, 92, 246, ${p.opacity})`;
+                  ctx.fill();
+
+                  for (let j = i + 1; j < COUNT; j++) {
+                    const q = particles[j];
+                    const d = Math.hypot(p.x - q.x, p.y - q.y);
+
+                    if (d < MAX_DIST) {
+                      ctx.beginPath();
+                      ctx.moveTo(p.x, p.y);
+                      ctx.lineTo(q.x, q.y);
+                      ctx.strokeStyle = `rgba(139, 92, 246, ${(1 - d / MAX_DIST) * 0.35})`;
+                      ctx.lineWidth = 0.7;
+                      ctx.stroke();
+                    }
+                  }
+                }
+
+                requestAnimationFrame(draw);
+              }
+
+              window.addEventListener('mousemove', e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+              });
+
+              window.addEventListener('mouseleave', () => {
+                mouse.x = -9999;
+                mouse.y = -9999;
+              });
+
+              window.addEventListener('resize', () => {
+                resize();
+                createParticles();
+              });
+
+              resize();
+              createParticles();
+              draw();
+            </script>
+</body>
+
+</html>

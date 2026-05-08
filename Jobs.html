@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Fonts from fonts.google.com -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="Jobs.css">
+    <title>Jobs - Hot Beans</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+<canvas id="particle-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+<!-- Navigation Bar     -->
+    <div class="navigation-Bar">
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="hot beans logo"></a>
+            <a href="index.html"><h1>Hot Beans</h1></a>
+            
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="Team.html">Team</a></li>
+            <li><a href="Jobs.html">Jobs</a></li>
+            <li><a href="Courses.html">Courses</a></li>
+        </ul>
+
+        <button class="apply-btn"><a href="Apply.html">Apply</a></button>
+
+        
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('nav-links');
+
+        btn.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
+<!-- Navigation Bar     -->
+
+
+
+
+
+<div class="title">
+  <h1>Jobs</h1>
+ 
+</div>
+
+<div class="jobs-controls">
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search roles, skills, or companies...">
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+    <button class="filter-btn" data-filter="devops">DevOps</button>
+    <button class="filter-btn" data-filter="remote">Remote</button>
+  </div>
+</div>
+
+<div class="results-count">Showing <span id="count">6</span> roles</div>
+
+<div class="jobs-grid" id="jobs-grid">
+
+  <div class="job-card featured" data-tags="frontend react remote">
+    <div class="job-header">
+      <div>
+        <div class="job-title">Senior React Developer</div>
+        <div class="job-company">Nexus Labs · London, UK</div>
+      </div>
+      <span class="featured-badge">Featured</span>
+    </div>
+    <p class="job-desc">Build high-performance interfaces for a fast-growing fintech startup. Own the frontend architecture and lead a small team of developers.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 Hybrid</span>
+      <span class="meta-item">⏱ Full-time</span>
+      <span class="meta-item">🏢 50–200 employees</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£70k – £90k</span>
+      <span class="job-tag">React</span>
+      <span class="job-tag">TypeScript</span>
+      <span class="job-tag">AWS</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 2 days ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div class="job-card" data-tags="backend node remote">
+    <div class="job-header">
+      <div>
+        <div class="job-title">Backend Engineer</div>
+        <div class="job-company">Orbital Systems · Manchester</div>
+      </div>
+    </div>
+    <p class="job-desc">Design and scale distributed APIs for a cloud infrastructure platform. Strong Node.js and PostgreSQL experience required.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 Remote</span>
+      <span class="meta-item">⏱ Full-time</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£55k – £75k</span>
+      <span class="job-tag">Node.js</span>
+      <span class="job-tag">PostgreSQL</span>
+      <span class="job-tag">Docker</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 5 days ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div class="job-card" data-tags="frontend ui remote">
+    <div class="job-header">
+      <div>
+        <div class="job-title">UI / UX Developer</div>
+        <div class="job-company">Prism Studio · Remote</div>
+      </div>
+    </div>
+    <p class="job-desc">Craft pixel-perfect interfaces and collaborate with product designers to ship beautiful, accessible experiences across web and mobile.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 Remote</span>
+      <span class="meta-item">⏱ Contract</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£45k – £60k</span>
+      <span class="job-tag">Figma</span>
+      <span class="job-tag">CSS</span>
+      <span class="job-tag">Vue.js</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 1 week ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div class="job-card" data-tags="fullstack nextjs">
+    <div class="job-header">
+      <div>
+        <div class="job-title">Full Stack Developer</div>
+        <div class="job-company">Forge Digital · Birmingham</div>
+      </div>
+    </div>
+    <p class="job-desc">Work across the whole stack on a modern SaaS platform. Involved in architecture decisions and shipping features end-to-end.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 Hybrid</span>
+      <span class="meta-item">⏱ Full-time</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£60k – £80k</span>
+      <span class="job-tag">Next.js</span>
+      <span class="job-tag">Python</span>
+      <span class="job-tag">MongoDB</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 3 days ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div class="job-card" data-tags="devops aws remote">
+    <div class="job-header">
+      <div>
+        <div class="job-title">DevOps Engineer</div>
+        <div class="job-company">CloudCore · Remote</div>
+      </div>
+    </div>
+    <p class="job-desc">Own CI/CD pipelines, Kubernetes clusters, and infrastructure-as-code for a rapidly scaling platform used by thousands of developers.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 Remote</span>
+      <span class="meta-item">⏱ Full-time</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£65k – £85k</span>
+      <span class="job-tag">Kubernetes</span>
+      <span class="job-tag">Terraform</span>
+      <span class="job-tag">AWS</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 4 days ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+  <div class="job-card" data-tags="backend python">
+    <div class="job-header">
+      <div>
+        <div class="job-title">Python Developer</div>
+        <div class="job-company">DataStream · Leeds</div>
+      </div>
+    </div>
+    <p class="job-desc">Build data pipelines and backend services for a machine learning platform. Collaborate with data scientists to productionise ML models.</p>
+    <div class="job-meta">
+      <span class="meta-item">📍 On-site</span>
+      <span class="meta-item">⏱ Full-time</span>
+    </div>
+    <div class="job-tags">
+      <span class="job-tag salary-tag">£50k – £70k</span>
+      <span class="job-tag">Python</span>
+      <span class="job-tag">Django</span>
+      <span class="job-tag">Redis</span>
+    </div>
+    <div class="job-footer">
+      <span class="posted">Posted 6 days ago</span>
+      <button class="apply-now-btn"><a href="Apply.html">Apply Now</a></button>
+    </div>
+  </div>
+
+</div>
+
+<div class="empty-space"></div>
+
+<footer>
+    <p>© 2026 Hot Beans Web</p>
+</footer>
+
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.job-card');
+  const countEl = document.getElementById('count');
+  const searchInput = document.getElementById('search-input');
+
+  function filterCards() {
+    const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+    const searchTerm = searchInput.value.toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const tags = card.dataset.tags || '';
+      const text = card.innerText.toLowerCase();
+      const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+      const matchesSearch = searchTerm === '' || text.includes(searchTerm);
+
+      if (matchesFilter && matchesSearch) {
+        card.style.display = 'flex';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    countEl.textContent = visible;
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterCards();
+    });
+  });
+
+  searchInput.addEventListener('input', filterCards);
+</script>
+
+
+
+
+<script>
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+
+let W, H;
+let particles;
+
+const COUNT = 80;
+const MAX_DIST = 130;
+
+const mouse = { x: -9999, y: -9999 };
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+
+function rand(a, b) { 
+  return Math.random() * (b - a) + a; 
+}
+
+function createParticles() {
+  particles = Array.from({ length: COUNT }, () => ({
+    x: rand(0, W),
+    y: rand(0, H),
+    vx: rand(-0.25, 0.25),
+    vy: rand(-0.25, 0.25),
+    r: rand(1.5, 3),
+    opacity: rand(0.4, 0.9)
+  }));
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  for (let i = 0; i < COUNT; i++) {
+    const p = particles[i];
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > W) p.vx *= -1;
+    if (p.y < 0 || p.y > H) p.vy *= -1;
+
+    const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+
+    if (dm < 150) {
+      const f = (1 - dm / 150) * 0.6;
+      p.x += (p.x - mouse.x) * f * 0.02;
+      p.y += (p.y - mouse.y) * f * 0.02;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(139, 92, 246, ${p.opacity})`;
+    ctx.fill();
+
+    for (let j = i + 1; j < COUNT; j++) {
+      const q = particles[j];
+      const d = Math.hypot(p.x - q.x, p.y - q.y);
+
+      if (d < MAX_DIST) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = `rgba(139, 92, 246, ${(1 - d / MAX_DIST) * 0.35})`;
+        ctx.lineWidth = 0.7;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+
+window.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
+
+window.addEventListener('mouseleave', () => {
+  mouse.x = -9999;
+  mouse.y = -9999;
+});
+
+window.addEventListener('resize', () => {
+  resize();
+  createParticles();
+});
+
+resize();
+createParticles();
+draw();
+</script>
+</body>
+</html>

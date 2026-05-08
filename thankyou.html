@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="thankyou.css">
+  <title>Application Received - Hot Beans</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navigation-Bar">
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo.png" alt="hot beans logo"></a>
+      <a href="index.html"><h1>Hot Beans</h1></a>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Jobs.html">Jobs</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+    </ul>
+    <button class="apply-btn"><a href="Apply.html">Apply</a></button>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <script>
+    const btn = document.getElementById('hamburger-btn');
+    const nav = document.getElementById('nav-links');
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+  <!-- Navigation Bar -->
+
+  <div class="thankyou-container">
+
+    <div class="check">&#10003;</div>
+
+    <h1>Application Received</h1>
+    <p class="subtitle">Thanks for applying to <span class="highlight">Hot Beans</span>. We've got your details and will be in touch soon.</p>
+
+    <div class="summary" id="summary">
+      <!-- filled by JS -->
+    </div>
+
+    <a href="index.html" class="home-btn">Back to Home</a>
+
+  </div>
+
+  <script>
+    const role = sessionStorage.getItem('role') || 'N/A';
+    const firstName = sessionStorage.getItem('firstName') || '';
+    const lastName = sessionStorage.getItem('lastName') || '';
+    const email = sessionStorage.getItem('email') || 'N/A';
+
+    document.getElementById('summary').innerHTML = `
+      <div class="summary-row"><span>Name</span><span>${firstName} ${lastName}</span></div>
+      <div class="summary-row"><span>Email</span><span>${email}</span></div>
+      <div class="summary-row"><span>Role</span><span>${role}</span></div>
+      
+    `;
+  </script>
+
+</body>
+</html>

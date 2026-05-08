@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="navigation.css">
+<link rel="stylesheet" href="style.css">
+<title>Hot Beans</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+<canvas id="particle-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+<div class="navigation-Bar">
+    <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="hot beans logo"></a>
+        <a href="index.html"><h1>Hot Beans</h1></a>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="Team.html">Team</a></li>
+        <li><a href="Jobs.html">Jobs</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+    </ul>
+
+    <button class="apply-btn"><a href="Apply.html">Apply</a></button>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+
+
+
+<div class="main-container">
+  <div class="hero-left">
+    <div class="left-banner">
+      <span class="banner-dot"></span>
+      SYSTEM ONLINE: RECRUITMENT V2.4
+    </div>
+    <h1>Fuel Your</h1>
+    <h2>Tech Career</h2>
+    <p>Precision-engineered recruitment for elite developers. Navigate the digital frontier with high-octane jobs and advanced technical training.</p>
+    <div class="content-buttons">
+      <a class="btn-get-started" href="Apply.html">Get Started</a>
+      <a class="btn-view-courses" href="Courses.html">View Courses</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="stat-num">500+</span><span class="stat-lbl">Active Jobs</span></div>
+      <div class="hero-stat"><span class="stat-num">120+</span><span class="stat-lbl">Partner Companies</span></div>
+      <div class="hero-stat"><span class="stat-num">98%</span><span class="stat-lbl">Placement Rate</span></div>
+    </div>
+  </div>
+
+
+  <div class="hero-right">
+    
+    <div class="feature-card">
+      <div>
+        <h4>Elite Matching</h4>
+        <p>AI-powered job matching that connects the right engineer to the right role, fast.</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div>
+        <h4>Precision Recruiting</h4>
+        <p>We vet every role and candidate — no noise, just the best opportunities.</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div>
+        <h4>Career Growth</h4>
+        <p>From apprentice to senior engineer, we support every stage of your journey.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glow-orb orb1"></div>
+  <div class="glow-orb orb2"></div>
+</div>
+
+<div class="spacing"></div>
+
+<div class="featured-headline">
+    <h1>Featured Jobs</h1>
+    <h2>Live transmissions from industry leaders</h2>
+</div>
+
+<div class="grid-jobs-line-one">
+    <div class="job-card">
+        <h3>UI Developer</h3>
+        <p>We are looking for a talented UI Developer to create visually engaging and user-friendly web interfaces. You will work closely with designers and backend developers to turn concepts into responsive, high-performance applications. The ideal candidate has a strong eye for design, a passion for clean code, and experience building modern frontend solutions using frameworks like React or similar technologies.</p>
+        <div class="tagicons">
+            <span class="salary">£40k - £60k</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Frontend</span>
+        </div>
+        <br><br>
+        <div class="applybtncontainer">
+            <button class="job-apply-now"><a href="Apply.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <div class="job-card">
+        <h3>JavaScript Developer</h3>
+        <p>Work with big data to derive insights and build predictive models. Proficiency in Python and ML frameworks needed.</p>
+        <div class="tagicons">
+            <span class="salary">£45k - £70k</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">APIs</span>
+        </div>
+        <br><br><br>
+        <div class="applybtncontainer">
+            <button class="job-apply-now"><a href="Apply.html">Apply Now</a></button>
+        </div>
+    </div>
+</div>
+
+<div class="grid-jobs-line-two">
+
+    <div class="job-card">
+        <h3>React Developer</h3>
+        <p>We are looking for a React Developer to build fast and interactive user interfaces. You will be responsible for developing reusable components, managing application state, and collaborating with designers to create seamless user experiences. The ideal candidate is experienced with React, modern JavaScript, and frontend best practices.</p>
+        <div class="tagicons">
+            <span class="salary">£50k - £70k</span>
+            <span class="tag">React</span>
+            <span class="tag">Performance</span>
+        </div>
+        <div class="applybtncontainer">
+            <button class="job-apply-now"><a href="Apply.html">Apply Now</a></button>
+        </div>
+    </div>
+
+    <div class="job-card">
+        <h3>Looking for something else?</h3>
+        <p>Can't find the right role? We're always on the lookout for talented individuals who are passionate about what they do. Explore more opportunities across our teams or reach out to us directly—we may have something that perfectly matches your skills and ambitions. Even if there isn't a current opening that fits, we'd still love to hear from you and keep you in mind for future roles.</p>
+        <div class="tagicons">
+            <span class="tag">Career</span>
+            <span class="tag">Open Roles</span>
+            <span class="tag">Apply Anytime</span>
+            <span class="tag">Join Us</span>
+        </div>
+        <br><br>
+        <div class="applybtncontainer">
+            <button class="Search-All-jobs"><a href="Apply.html">Search All Jobs</a></button>
+        </div>
+    </div>
+</div>
+
+<div class="spacing"></div>
+
+<div class="top-courses-headline">
+    <h1>Top Courses</h1>
+    <h2>Accelerate your career with our expert-led courses</h2>
+</div>
+
+<div class="slider-wrapper">
+    <button class="arrow left">&#10094;</button>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="course-card">
+                <img src="assets/Scrimba.png" alt="">
+                <h3>Scrimba </h3>
+                <p>A unique learning platform where videos are interactive—you can pause and edit code inside the lesson itself. Great for learning React, JavaScript, and front-end basics.</p>
+                <div class="tagicons">
+                    <span class="tag">#HTML</span>
+                    <span class="tag">#Frontend</span>
+                    <span class="tag">#React</span>
+                </div>
+                <div class="applynow"><button class="job-apply-now"><a href="https://scrimba.com/home" target="_blank">View Course</a></button></div>
+            </div>
+
+            <div class="course-card">
+                <img src="assets/FrontendMentor.webp" alt="">
+                <h3>Frontend Mentor</h3>
+                <p>A project-based platform where you get real UI designs and build them using HTML, CSS, and JavaScript. Excellent for improving portfolio and real-world coding skills.</p>
+                <div class="tagicons">
+                    <span class="tag">#Portfolio</span>
+                    <span class="tag">#Frontend</span>
+                    <span class="tag">#Backend</span>
+                </div>
+                <br><br>
+                <div class="applynow"> <button class="job-apply-now"><a href="https://www.frontendmentor.io/" target="_blank">View Course</a></button></div>
+            </div>
+
+            <div class="course-card">
+                <img src="assets/www3schools.webp" alt="">
+                <h3>W3 Schools</h3>
+                <p>W3Schools is a free online learning website that teaches web development and programming. It focuses heavily on beginner-friendly tutorials for HTML, CSS, JavaScript, and many other technologies.</p>
+                <div class="tagicons">
+                    <span class="tag">#W3Schools</span>
+                    <span class="tag">#FreeLearning</span>
+                    <span class="tag">#HTML</span>
+                </div>
+                <div class="applynow"><button class="job-apply-now"><a href="https://www.w3schools.com/" target="_blank">View Course</a></button></div>
+            </div>
+
+            <div class="course-card">
+                <img src="assets/MDNwebdocs.webp" alt="">
+                <h3>MDN Web Docs</h3>
+                <p>One of the most trusted web development references on the internet. Created by Mozilla, it explains HTML, CSS, and JavaScript in deep detail with real-world standards and examples.</p>
+                <div class="tagicons">
+                    <span class="tag">#Documentation</span>
+                    <span class="tag">#Advanced</span>
+                    <span class="tag">#JavaScript</span>
+                </div>
+                <div class="applynow"><button class="job-apply-now"><a href="https://developer.mozilla.org/en-US/docs/Web/" target="_blank">View Course</a></button></div>
+            </div>
+
+            <div class="course-card">
+                <img src="assets/freeCodeCamp.webp" alt="">
+                <h3>FreeCodeCamp</h3>
+                <p>A completely free learning platform with structured courses and hundreds of coding challenges. You learn by building real projects like websites, apps, and APIs.</p>
+                <div class="tagicons">
+                    <span class="tag">#FreeLearning</span>
+                    <span class="tag">#APIs</span>
+                    <span class="tag">#Projects</span>
+                </div>
+                <div class="applynow"><button class="job-apply-now"><a href="https://www.freecodecamp.org/" target="_blank">View Course</a></button></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="arrow right">&#10095;</button>
+</div>
+
+<div class="spacing"></div>
+
+
+<footer>
+    <p>© 2026 Hot Beans Web</p>
+</footer>
+
+<script>
+// ── Slider: responsive + touch/swipe support ──
+const slider = document.querySelector('.slider');
+const cards = document.querySelectorAll('.course-card');
+const totalCards = cards.length;
+let index = 0;
+
+function getVisibleCards() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
+}
+
+function getCardWidth() {
+  return cards[0].getBoundingClientRect().width + 20; // width + gap
+}
+
+function goTo(newIndex) {
+  const maxIndex = totalCards - getVisibleCards();
+  index = Math.max(0, Math.min(newIndex, maxIndex));
+  slider.style.transform = `translateX(-${index * getCardWidth()}px)`;
+}
+
+document.querySelector('.right').addEventListener('click', () => {
+  const maxIndex = totalCards - getVisibleCards();
+  goTo(index < maxIndex ? index + 1 : 0);
+});
+
+document.querySelector('.left').addEventListener('click', () => {
+  const maxIndex = totalCards - getVisibleCards();
+  goTo(index > 0 ? index - 1 : maxIndex);
+});
+
+// Reset position on resize so cards don't get stuck
+window.addEventListener('resize', () => {
+  index = 0;
+  slider.style.transition = 'none';
+  slider.style.transform = 'translateX(0)';
+  setTimeout(() => { slider.style.transition = 'transform 0.4s ease'; }, 50);
+});
+
+// Touch/swipe support
+let touchStartX = 0;
+let touchEndX = 0;
+
+slider.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+slider.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 40) { // minimum swipe distance
+    if (diff > 0) {
+      // swipe left → next
+      const maxIndex = totalCards - getVisibleCards();
+      goTo(index < maxIndex ? index + 1 : 0);
+    } else {
+      // swipe right → prev
+      const maxIndex = totalCards - getVisibleCards();
+      goTo(index > 0 ? index - 1 : maxIndex);
+    }
+  }
+}, { passive: true });
+</script>
+
+<script>
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+
+let W, H;
+let particles;
+
+const COUNT = 80;
+const MAX_DIST = 130;
+
+const mouse = { x: -9999, y: -9999 };
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+
+function rand(a, b) { 
+  return Math.random() * (b - a) + a; 
+}
+
+function createParticles() {
+  particles = Array.from({ length: COUNT }, () => ({
+    x: rand(0, W),
+    y: rand(0, H),
+    vx: rand(-0.25, 0.25),
+    vy: rand(-0.25, 0.25),
+    r: rand(1.5, 3),
+    opacity: rand(0.4, 0.9)
+  }));
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  for (let i = 0; i < COUNT; i++) {
+    const p = particles[i];
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > W) p.vx *= -1;
+    if (p.y < 0 || p.y > H) p.vy *= -1;
+
+    const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+
+    if (dm < 150) {
+      const f = (1 - dm / 150) * 0.6;
+      p.x += (p.x - mouse.x) * f * 0.02;
+      p.y += (p.y - mouse.y) * f * 0.02;
+    }
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(139, 92, 246, ${p.opacity})`;
+    ctx.fill();
+
+    for (let j = i + 1; j < COUNT; j++) {
+      const q = particles[j];
+      const d = Math.hypot(p.x - q.x, p.y - q.y);
+
+      if (d < MAX_DIST) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = `rgba(139, 92, 246, ${(1 - d / MAX_DIST) * 0.35})`;
+        ctx.lineWidth = 0.7;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+
+window.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
+
+window.addEventListener('mouseleave', () => {
+  mouse.x = -9999;
+  mouse.y = -9999;
+});
+
+window.addEventListener('resize', () => {
+  resize();
+  createParticles();
+});
+
+resize();
+createParticles();
+draw();
+</script>
+
+
+<script>
+const btn = document.getElementById('hamburger-btn');
+const nav = document.getElementById('nav-links');
+
+btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+});
+
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+    });
+});
+</script>
+</body>
+</html>
