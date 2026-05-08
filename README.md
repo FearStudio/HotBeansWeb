@@ -1,2 +1,2 @@
 # HotBeansWeb
-THis is a Website Development Assigment and wanted to share my website tried my best to code it and during the developemt i have avoided using AI as i want to know what is happening and how everything works and improve on problem solving skills, got to say i did use abit of ai for javascript, i tried my best.
+This is a website development assignment, and I wanted to share my website. I’ve tried my best to code it, and during the development I’ve focused on understanding what is happening and how everything works in order to improve my problem-solving skills. I’ve really put in a lot of effort into it.
